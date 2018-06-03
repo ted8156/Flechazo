@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Flechazo - 產品介紹</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+				<a class="logo" href="index.html">Flechazo</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<style type="text/css">
+					.links { position: relative; }
+        			.plain { position: absolute; bottom: 0; }
+    			</style>
+				<ul class="links">
+					<li><a href="index.html" style="font-family:cwTeXYen;">關於我們</a></li>
+					<li><a href="product.html" style="font-family:cwTeXYen;">產品介紹</a></li>
+					<li><a href="purchase.html" style="font-family:cwTeXYen;">線上訂購</a></li>
+				</ul>
+				<ul class="plain">
+						<li><font face="cwTeXYen" style="color:#ffffff">追蹤我們</font></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1><font face="cwTeXYen">產品介紹</font></h1>
+			</div>
+
+		<!-- Main -->
+			<section id="footer" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<section>
+							<div class="showbox"><img width="100%" id="show-image" src="images/logo-v.png" /></div>
+							<div class="abgne-block-20120106">
+								<a href="images/logo-v.png"><img src="images/logo-v.png" title="" /></a>
+								<a href="images/prod1-1.jpg"><img src="images/prod1-1.jpg" title="" /></a>
+								<a href="images/prod1-2.png"><img src="images/prod1-2.png" title="" /></a>
+								<a href="images/prod1-3.png"><img src="images/prod1-3.png" title="" /></a>
+							</div>
+						</section>
+						<section>
+							<h3><font face="cwTeXYen" size="3.5">一見鍾情招牌起司條</font></h3>
+							<h4><font face="cwTeXYen" size="2">
+								內容物：50g/條，10條/盒<br/>
+								保存方式：冷藏或冷凍，開封後請立即食用<br/>
+								有效日期：冷凍（-18℃以下）可保存14日，冷藏（10℃以下）可保存7日<br/>
+							</font></h4>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="inner">
+					<header class="special">
+						<a href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>			
+					</header>
+					<div class="copyright">
+						&copy; Flechazo manage group
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					// 用來顯示大圖片用
+					var $showImage = $('#show-image');
+					
+					// 當滑鼠移到 .abgne-block-20120106 中的某一個超連結時
+					$('.abgne-block-20120106 a').mouseover(function(){
+						// 把 #show-image 的 src 改成被移到的超連結的位置
+						//$showImage.attr('src', $(this).attr('href'));
+						
+						var $this = $(this), 
+							_src = $this.attr('href');
+			
+						if($showImage.attr('src') != _src){
+							$showImage.stop(false, true).fadeTo(0, 0).attr('src', _src).stop(false, true).fadeTo(400, 1);
+						}
+					}).click(function(){
+						// 如果超連結被點擊時, 取消連結動作
+						return false;
+					});
+				});
+			</script>
+			</head>
+
+	</body>
+</html>
